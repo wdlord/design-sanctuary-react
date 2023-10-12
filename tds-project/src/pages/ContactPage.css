@@ -1,0 +1,21 @@
+.contact-row1 {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 56px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-row1 {
+    margin-bottom: 24px;
+  }
+}
+
+.contact-row2 {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}

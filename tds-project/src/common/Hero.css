@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+.hero {
+  background-color: #244163;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url("/src/assets/blue-gears.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.thinker-graphic {
+  width: 100vw;
+  max-width: 725px;
+  height: 300px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.thinker-graphic ul {
+  list-style: none;
+  font-family: "Abel", sans-serif;
+  padding: 0;
+  display: inline-block;
+  font-size: 56px;
+  margin: 0;
+  margin-left: 32px;
+  margin-bottom: 0.7em;
+}
+
+/* Adjust the graphic for smaller screens. */
+@media screen and (max-width: 768px) {
+  .hero {
+    background-size: 120% auto;
+  }
+
+  .thinker-graphic {
+    width: 250px;
+    display: block;
+    position: relative;
+    height: 200px;
+  }
+
+  .thinker-graphic ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .thinker-graphic img {
+    height: 200px;
+  }
+}

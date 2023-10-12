@@ -1,0 +1,13 @@
+.attributions {
+  padding: 20px;
+}
+
+.attributions li {
+  margin: 0.8em 0;
+}
+
+#attr-hr {
+  width: 80%;
+  color: lightgray;
+  margin-bottom: 40px;
+}

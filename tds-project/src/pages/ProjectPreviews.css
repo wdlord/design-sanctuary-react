@@ -1,0 +1,80 @@
+.overview {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+/* Project Image Grid */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 25px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 45px 25px;
+  }
+}
+
+.project-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image-container {
+  background-color: #d9d9d9;
+  padding: 12px 12px 8px 12px;
+  max-width: 200px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.project-image {
+  width: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  transition-duration: 0.2s;
+}
+
+.project-grid figcaption {
+  margin-top: 0.8em;
+  text-align: center;
+}
+
+.hover-container {
+  position: relative;
+}
+
+.hover-container:hover {
+  transform: scale(1.025);
+}
+
+.hover-container:hover > .project-image {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.hover-container:hover > .zoom-icon {
+  display: block;
+}
+
+.zoom-icon {
+  position: absolute;
+  display: none;
+  left: 4px;
+  bottom: 8px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .zoom-icon {
+    display: block;
+  }
+}

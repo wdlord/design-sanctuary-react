@@ -1,0 +1,207 @@
+/* These classes are the content shared between mobile and desktop navbar. */
+
+.project-samples-heading {
+  margin-left: 15px;
+}
+
+.hamburger-icon {
+  width: 25px;
+  margin: 0;
+  filter: invert(100%) sepia(3%) saturate(11%) hue-rotate(61deg)
+    brightness(103%) contrast(101%);
+}
+
+.navbar {
+  background-color: #244163;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Desktop Specific Styling */
+
+.desktop-nav {
+  width: 1420px;
+  max-width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  display: flex;
+}
+
+.dropdown:hover .dropdown-button {
+  filter: invert(8%) sepia(15%) saturate(146%) hue-rotate(157deg)
+    brightness(95%) contrast(97%);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:focus-within .dropdown-button {
+  filter: invert(8%) sepia(15%) saturate(146%) hue-rotate(157deg)
+    brightness(95%) contrast(97%);
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  width: 200px;
+  min-width: 160px;
+
+  display: none;
+  position: absolute;
+  z-index: 1;
+
+  background-color: transparent;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 6px 0;
+}
+
+.dropdown-content a {
+  display: block;
+
+  color: white;
+  font-size: 14px;
+  padding: 10px 16px;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.contact-button-desktop {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 0.6em 2.5ch;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 7px;
+}
+
+.contact-button-desktop:hover {
+  color: black;
+  background-color: white;
+  mix-blend-mode: screen;
+  border-style: none;
+}
+
+.mobile-nav {
+  width: 100%;
+  display: none;
+}
+
+.drawer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.drawer-container {
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* This class added and removed in JS to open and close the drawer menu. */
+.container-open {
+  height: 230px;
+  transition: height 0.5s ease-in-out;
+}
+
+.drawer-content {
+  background-color: white;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: static;
+  z-index: -99;
+  transform: translateY(-100%);
+
+  transition-property: transform, position, z-index;
+  transition-duration: 0.5s, 0s, 0s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), ease-in-out,
+    ease-in-out;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+
+/* This class added and removed in JS to open and close the drawer menu. */
+.drawer-open {
+  transform: none;
+  position: static;
+  z-index: 99;
+
+  transition-property: transform, position, z-index;
+  transition-duration: 0.5s, 0s, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.drawer a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 0.5em;
+}
+
+.drawer a:focus {
+  text-decoration: underline;
+}
+
+#contact-link {
+  font-weight: 600;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  width: 9ch;
+  padding: 0.5em;
+}
+
+.drawer hr {
+  width: 70%;
+  border-color: #585858;
+  border-width: 0.5px;
+  border-style: solid;
+}
+
+/* This media query switches visibility from desktop to mobile navbar. */
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
